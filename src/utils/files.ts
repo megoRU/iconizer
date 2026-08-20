@@ -1,0 +1,4 @@
+export function formatBytes(bytes: number): string { if (bytes < 1024) return `${bytes} B`; const units = ['KB','MB','GB']; let value = bytes / 1024; let index = 0; while (value >= 1024 && index < units.length - 1) { value = value / 1024; index = index + 1; } return `${value.toFixed(value >= 10 ? 1 : 2)} ${units[index]}`; }
+export function downloadBlob(blob: Blob, filename: string): void { const url = URL.createObjectURL(blob); const anchor = document.createElement('a'); anchor.href = url; anchor.download = filename; document.body.appendChild(anchor); anchor.click(); anchor.remove(); window.setTimeout(() => URL.revokeObjectURL(url), 1000); }
+export function normalizeIcoName(name: string): string { const trimmed = name.trim() || 'favicon.ico'; return trimmed.toLowerCase().endsWith('.ico') ? trimmed : `${trimmed}.ico`; }
+export function sanitizeBaseName(name: string): string { return (name.trim() || 'icon').replace(/[\\/:*?"<>|]/g, '-'); }

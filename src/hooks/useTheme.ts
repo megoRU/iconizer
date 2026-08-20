@@ -1,0 +1,4 @@
+import { useEffect, useState } from 'react';
+import type { ThemeMode } from '../types';
+import { readStorage, writeStorage } from '../utils/storage';
+export function useTheme(): [ThemeMode, (mode: ThemeMode) => void] { const [theme, setThemeState] = useState<ThemeMode>(() => readStorage<ThemeMode>('iconizer.theme', 'system')); useEffect(() => { const media = window.matchMedia('(prefers-color-scheme: dark)'); const apply = (): void => { const resolved = theme === 'system' ? (media.matches ? 'dark' : 'light') : theme; document.documentElement.setAttribute('data-bs-theme', resolved); document.documentElement.dataset.themePreference = theme; }; apply(); media.addEventListener('change', apply); return () => media.removeEventListener('change', apply); }, [theme]); function setTheme(mode: ThemeMode): void { setThemeState(mode); writeStorage('iconizer.theme', mode); } return [theme, setTheme]; }
