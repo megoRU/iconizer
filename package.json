@@ -5,12 +5,14 @@
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
+    "@tabler/core": "^1.4.0",
+    "@tabler/icons-react": "^3.46.0",
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
+    "jszip": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "jszip": "latest"
+    "typescript": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
     "@types/react": "latest",

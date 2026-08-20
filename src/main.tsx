@@ -1,7 +1,13 @@
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
 import './styles.css';
+
 const rootElement = document.getElementById('root');
 if (rootElement === null) throw new Error('Root element not found');
 createRoot(rootElement).render(<App />);
-if ('serviceWorker' in navigator) { window.addEventListener('load', () => { void navigator.serviceWorker.register('/sw.js'); }); }
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    void navigator.serviceWorker.register('/sw.js');
+  });
+}
