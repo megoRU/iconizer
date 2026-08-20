@@ -1,7 +1,7 @@
 export const ru = {
   appTitle: 'Iconizer',
   heroTitle: 'Создавайте иконки из одного изображения',
-  heroSubtitle: 'Генерируйте PNG, ICO прямо в браузере.',
+  heroSubtitle: 'Создавайте иконки нужных размеров быстро и удобно.',
   dropHere: 'Перетащите изображение сюда',
   dropActive: 'Отпустите изображение для загрузки',
   chooseFile: 'Выберите файл',

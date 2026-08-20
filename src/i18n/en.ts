@@ -1,7 +1,7 @@
 export const en = {
   appTitle: 'Iconizer',
   heroTitle: 'Create icons from one image',
-  heroSubtitle: 'Generate PNG and ICO directly in your browser.',
+  heroSubtitle: 'Create icons in required sizes easily and quickly.',
   dropHere: 'Drop your image here',
   dropActive: 'Drop image to upload',
   chooseFile: 'Choose a file',
