@@ -1,0 +1,2 @@
+import type { ProgressState } from '../../types';
+export function Progress(props: { progress: ProgressState | null }): JSX.Element | null { if (props.progress === null) return null; const percent = props.progress.total === 0 ? 0 : Math.round((props.progress.current / props.progress.total) * 100); return <div className="progress-card" role="status" aria-live="polite"><strong>{props.progress.label}</strong><span>{props.progress.current} / {props.progress.total}</span><div className="progress"><div className="progress-bar" style={{ width: `${percent}%` }} /></div></div>; }

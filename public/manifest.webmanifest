@@ -1,0 +1,1 @@
+{"name":"Iconizer","short_name":"Iconizer","description":"Create icons in multiple sizes from one image.","start_url":"/","display":"standalone","background_color":"#ffffff","theme_color":"#206bc4","icons":[{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
